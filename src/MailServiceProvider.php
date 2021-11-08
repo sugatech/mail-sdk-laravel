@@ -21,15 +21,15 @@ class MailServiceProvider extends ServiceProvider
             }
 
             if (!isset($options['oauth']['url'])) {
-                throw new \InvalidArgumentException('Not found oauth.url config');
+                throw new InvalidArgumentException('Not found oauth.url config');
             }
 
             if (!isset($options['oauth']['client_id'])) {
-                throw new \InvalidArgumentException('Not found oauth.client_id config');
+                throw new InvalidArgumentException('Not found oauth.client_id config');
             }
 
             if (!isset($options['oauth']['client_secret'])) {
-                throw new \InvalidArgumentException('Not found oauth.client_secret config');
+                throw new InvalidArgumentException('Not found oauth.client_secret config');
             }
 
             return new MailClient($options['api_url']);

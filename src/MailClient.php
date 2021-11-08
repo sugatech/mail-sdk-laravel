@@ -57,7 +57,7 @@ class MailClient
      * @param string $route
      * @return string
      */
-    private function getUrl(string $route)
+    private function getUrl($route)
     {
         return $this->apiUrl . '/api/client/v1' . $route;
     }
@@ -65,19 +65,19 @@ class MailClient
     /**
      * @param string $sender
      * @param string $senderName
-     * @param string $receiver
+     * @param array $receivers
      * @param string $subject
      * @param string $content
      * @param string $contentType
      * @return bool
      * @throws \Illuminate\Http\Client\RequestException
      */
-    public function send($sender, $senderName, $receiver, $subject, $content, $contentType)
+    public function send($sender, $senderName, $receivers, $subject, $content, $contentType)
     {
         $params = [
             "sender" => $sender,
             "sender_name" => $senderName,
-            "receiver" => $receiver,
+            "receivers" => $receivers,
             "subject" => $subject,
             "content" => $content,
             "content_type" => $contentType,
