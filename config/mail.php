@@ -7,5 +7,9 @@ return [
         'client_id' => env('MAIL_OAUTH_CLIENT_ID'),
         'client_secret' => env('MAIL_OAUTH_CLIENT_SECRET'),
     ],
+    'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
+    ],
 ];
 
