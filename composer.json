@@ -1,6 +1,6 @@
 {
     "name": "sugatech/mail-sdk-laravel",
-    "version": "0.1.2",
+    "version": "1.0.0",
     "license": "MIT",
     "type": "library",
     "description": "Mail Service SDK for Laravel and Lumen",
